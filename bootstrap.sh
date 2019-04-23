@@ -1,7 +1,9 @@
 #!/bin/sh
 
+DOTFILES_ROOT="`pwd`"
+
 link_files () {
-  ln -vs $1 $2
+  ln -s $1 $2
 }
 
 link () {
@@ -16,9 +18,9 @@ link () {
 		backup_all=false
 		skip_all=false
 
-		for source in $( find . -maxdepth 2 -name '*.symlink' ) ; 
+		for source in $( find $DOTFILES_ROOT -maxdepth 2 -name '*.symlink' ) ; 
 		do
-			dest="$HOME/$( basename "$source" '.symlink' )"
+			dest="$HOME/.$( basename "$source" '.symlink' )"
 
 			# -f: true if file exists, -d: true if directory exists
 			if [ -f $dest ] || [ -d $dest ];
