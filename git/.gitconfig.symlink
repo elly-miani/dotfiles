@@ -7,5 +7,5 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [user]
-	name = Eleonora Miani
+	name = elly-miani
 	email = miani.eleonora@gmail.com
