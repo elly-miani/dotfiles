@@ -18,7 +18,7 @@ link () {
 
 		for source in $( find . -maxdepth 2 -name '*.symlink' ) ; 
 		do
-			dest="$HOME/`basename \"${source%.*}\"`"
+			dest="$HOME/$( basename "$source" '.symlink' )"
 
 			# -f: true if file exists, -d: true if directory exists
 			if [ -f $dest ] || [ -d $dest ];
