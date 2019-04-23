@@ -1,0 +1,12 @@
+[storage]
+engine = file_system
+path = dotfiles
+directory = backup.exclude
+
+# Only sync one or two applications
+[applications_to_sync]
+atom
+intellijidea
+macosx
+vscode
+ssh
