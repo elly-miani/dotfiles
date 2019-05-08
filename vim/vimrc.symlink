@@ -61,10 +61,71 @@ if has('syntax') && has('eval')
 endif
 
 
-syntax on
-set background=dark
-set tabstop=4
 
+" Customizations
+
+syntax on
+set background=dark		  " Change theme color"
+set tabstop=4			  " Change tab size"
+set autoindent
+
+set number				  " Show line numbers"
+set ruler				  " Show ruler on bottom of screen
+
+set incsearch             " Show the match in search while typing"
+set ignorecase			  " Ignore case when searching"
+set smartcase 			  " But not when search pattern contains upper case characters"
+
+set complete=.,w,b,u,t	  " Better autocompletion -- ^P for suggestions "
+
+set wildmenu			  " Show command suggestion when typing tab
+set wildmode=list:longest,full
+
+set undolevels=1000
+set autoread			  " Automatically read a file that has changed on disk
+set clipboard+=unnamed    " Yanks go on clipboard instead
+
+
+
+
+" Fix split direction
+set splitbelow
+set splitright
+
+
+" Map shortcuts to navigate splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" To open help with vertical split instead of horizontal
+cabbrev help vert help
+
+
+
+
+" In many terminal emulators the mouse works just fine, thus enable it.
+set guicursor=n-v-c:block-Cursor-blinkon0,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor,r-cr:hor20-Cursor,sm:block-Cursor-blinkwait175-blinkoff150-blinkon175
+if has('mouse')
+  set mouse=a
+endif
+
+
+
+" netrw setup 
+let g:netrw_liststyle = 3		" Enable tree view instead of single folders
+let g:netrw_browse_split = 4	" Open files in previous window 
+let g:netrw_winsize = 25		" Default tree view split size
+let g:netrw_banner = 0			" Remove banner
+
+augroup ProjectDrawer
+  autocmd!
+  autocmd VimEnter * :Vexplore
+augroup END
+
+
+" Send all undo/backups/swaps to specific directories in home
 set undodir=~/.vim/.undo//
 set backupdir=~/.vim/.backup//
 set directory=~/.vim/.swp//
