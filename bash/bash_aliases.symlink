@@ -4,12 +4,17 @@ alias ~='cd ~'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+alias python='python3'
 
 # Quick-Look preview files from the command line
 alias ql="qlmanage -p &>/dev/null"
 
 # f:       Opens current directory in MacOS Finder
 alias f='open -a Finder ./'
+
+# add flag -F to identify directories and executables in ls command
+alias ls='ls -F'
+
 
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'    # myip:    Public facing IP Address
 alias localip="ipconfig getifaddr en0"                             # localip: Local IP

@@ -67,6 +67,7 @@ endif
 syntax on
 set background=dark		  " Change theme color"
 set tabstop=4			  " Change tab size"
+set shiftwidth=4
 set autoindent
 
 set number				  " Show line numbers"
@@ -79,12 +80,11 @@ set smartcase 			  " But not when search pattern contains upper case characters"
 set complete=.,w,b,u,t	  " Better autocompletion -- ^P for suggestions "
 
 set wildmenu			  " Show command suggestion when typing tab
-set wildmode=list:longest,full
+set wildmode=full 		  "list:longest
 
 set undolevels=1000
 set autoread			  " Automatically read a file that has changed on disk
 set clipboard+=unnamed    " Yanks go on clipboard instead
-
 
 
 
@@ -119,10 +119,12 @@ let g:netrw_browse_split = 4	" Open files in previous window
 let g:netrw_winsize = 25		" Default tree view split size
 let g:netrw_banner = 0			" Remove banner
 
-augroup ProjectDrawer
-  autocmd!
-  autocmd VimEnter * :Vexplore
-augroup END
+
+" open Vexplore automatically
+"augroup ProjectDrawer
+"  autocmd!
+"  autocmd VimEnter * :Vexplore
+"augroup END
 
 
 " Send all undo/backups/swaps to specific directories in home
