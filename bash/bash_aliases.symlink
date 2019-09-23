@@ -6,6 +6,8 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias python='python3'
 
+eval $(thefuck --alias)
+
 # Quick-Look preview files from the command line
 alias ql="qlmanage -p &>/dev/null"
 
@@ -14,6 +16,9 @@ alias f='open -a Finder ./'
 
 # add flag -F to identify directories and executables in ls command
 alias ls='ls -F'
+
+
+alias resetaudio='sudo killall coreaudiod'
 
 
 alias myip='dig +short myip.opendns.com @resolver1.opendns.com'    # myip:    Public facing IP Address
