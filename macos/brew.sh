@@ -41,7 +41,10 @@ brew install httpie
 brew install tree
 
 # tmux :'D 
-brew install tmux
+#brew install tmux
 
 # Mackup
-brew install mackup
+#brew install mackup
+
+# thefuck: corrects errors in previous console commands.
+brew install thefuck
